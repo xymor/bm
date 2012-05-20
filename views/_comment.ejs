@@ -1,0 +1,5 @@
+<div class="comment">
+  <div><span class="author"><%= comment.author %>:</span> <span class="body"><%- helpers.linkfy(comment.comment) %></span></div>
+  <div class="created_at"><%= relativeDate(comment.created_at) %></div>
+  <div class="clearfix"></div>
+</div>

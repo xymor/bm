@@ -1,0 +1,30 @@
+==== /misc ==== 
+
+Barramisc is a simple Google+ based webapp for intranets.
+
+==== Setup ==== 
+
+$> cd barramisc/
+$> npm install -g jake
+$> npm install -g nodemon
+$> npm update
+$> jake compile
+
+You need an instance of MongoDB up and running on the default port.
+
+==== Testing the app ====
+
+$> cd barramisc/
+$> expresso
+
+==== Running the app ====
+
+$> cd barramisc/
+$> node barramisc.js
+
+Point your favorite browser to http://localhost:3000.
+
+==== Authentication Mock ====
+
+We have an authentication mock, just in case you not have any LDAP server at hand.
+Just go to "/mock_login" and enjoy it.

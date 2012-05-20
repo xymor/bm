@@ -1,0 +1,16 @@
+<div class="post">	
+  <div>
+    <span class="author"><%= post.author %>,</span> 
+    <span class="created_at"><a href="/posts/<%= post._id.toHexString() %>"><%= relativeDate(post.created_at) %></a></span>
+  </div>
+  <div class="body"><%- helpers.linkfy(post.body) %></div>
+  <div class='comments'>
+    <%- partial('comment', post.comments) %>
+    <form method="post" action="/posts/addComment">
+      <input type="hidden" name="_id" value="<%= post._id.toHexString() %>" />
+      <textarea class="xxlarge" name="comment" id="addCommentComment" placeholder="Seu comentário..."></textarea>
+      <button class="btn small">Mandar</button>
+    </form>
+  </div>
+  <div class="clearfix"></div>
+</div>

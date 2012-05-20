@@ -1,0 +1,27 @@
+<% if(flash.length != 0) { %>
+<div class="alert-message error">
+  <a class="close" href="#">×</a>
+  <%- flash %>
+</div>
+<% } %>
+
+<form method="post" action="/login">
+  <fieldset>
+    <legend>Autenticação</legend>
+    <div class="clearfix">
+      <label for>Usuário</label>
+      <div class="input">
+        <input class="xlarge" type="text" name="login" />
+      </div>
+    </div>
+    <div class="clearfix">
+      <label for>Senha</label>
+      <div class="input">
+        <input class="xlarge" type="password" name="password"  />
+      </div>
+    </div>
+    <div class="actions">
+        <button class="btn primary">Entrar</button>
+    </div>
+  </fieldset>
+</form>

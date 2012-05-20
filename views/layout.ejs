@@ -1,0 +1,40 @@
+<html>
+<head>  
+  <link href="/stylesheets/bootstrap-1.0.0.min.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/scripts/jquery.min.js" charset="utf-8"></script>  
+  <title>/misc</title>
+</head>	
+<body>
+<div class="topbar">
+  <div class="container">
+    <h3><a class="logo" href="/">/misc</a></h3>
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+    <% if(session.logged) { %>
+      <ul class="nav secondary-nav">
+        <li class="menu">
+        <a href="#" class="menu"><%= session.user_name %></a>
+        <ul class="menu-dropdown" style="display: none;">
+          <li class="divider"></li>
+          <li><a href="/logout">Sair</a></li>
+        </ul>
+      </li>
+    </ul>  
+    <% } %>
+  </div>
+</div>
+<div id="content" class="container">
+  <div class="content">
+    <%- body %>
+  </div>
+</div>
+<div id="footer" class="container">
+  <div class="content">
+    &copy;2011 /misc
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="/scripts/client.js" charset="utf-8"></script>

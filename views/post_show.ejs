@@ -1,0 +1,22 @@
+<div id="articles">
+  <div class="post">
+	<div>
+		<span class="author"><a href="/posts/<%= post._id.toHexString() %>"><%= post.author %></a></span><span class="created_at">&nbsp;&nbsp;-&nbsp;&nbsp;<a href="/posts/<%= post._id.toHexString() %>"><%= relativeDate(post.created_at) %></a></span>
+	</div>
+	<div class="body"><%- helpers.linkfy(post.body) %></div>
+	<div class='comments'>
+	    <%- partial('comment', post.comments) %>
+		<div class="comments_form">
+			<form method="post" action="/posts/addComment">
+			  <input type="hidden" name="_id" value="<%= post._id.toHexString() %>" />  
+			  <div>    
+			    <textarea name="comment" rows="2" cols="46" id="addCommentComment" placeholder="Seu comentário..."></textarea>
+			  </div>
+			  <div id='editPostSubmit'>
+			    <input type="submit" value="Send" />
+			  </div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>

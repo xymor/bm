@@ -1,0 +1,17 @@
+<form class="form-stacked line" method="post" action="/posts/new">
+  <fieldset>
+    <legend>Manda pro misc!</legend>
+    <div class="clearfix">
+      <div class="input">
+        <textarea class="xxlarge"name="body" rows="5" placeholder="Seu conteúdo..."></textarea>
+      </div>
+    </div>
+    <div class="right">  
+      <button class="btn primary">Mandar</button>
+    </div>
+  </fieldset>
+</form>
+<div id="articles">
+  <%- partial('post', posts) %>
+</div>
+
